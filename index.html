@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeQuestGamer - RPG de Aprendizado</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="game-container">
+        <header class="game-header">
+            <h1>CODE QUEST GAMER</h1>
+            <p class="subtitle">A Jornada do Desenvolvedor</p>
+        </header>
+
+        <div id="character-creation" class="character-creation">
+            <h2>Criação do Personagem</h2>
+            <form id="character-form">
+                <div class="form-group">
+                    <label for="character-name">Nome do Herói:</label>
+                    <input type="text" id="character-name" required placeholder="Ex: Dev Knight">
+                </div>
+
+                <div class="form-group">
+                    <label for="character-class">Classe de Programador:</label>
+                    <select id="character-class">
+                        <option value="frontend">Front-end Warrior</option>
+                        <option value="backend">Back-end Mage</option>
+                        <option value="fullstack">Full-stack Ranger</option>
+                        <option value="mobile">Mobile Ninja</option>
+                        <option value="devops">DevOps Engineer</option>
+                        <option value="datascience">Data Wizard</option>
+                        <option value="cloud">Cloud Paladin</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="study-power">Poder de Estudo (horas/dia):</label>
+                    <input type="range" id="study-power" min="1" max="8" value="4">
+                    <span id="power-value">4</span> horas/dia
+                </div>
+
+                <button type="submit" class="start-btn">Iniciar Jornada</button>
+            </form>
+        </div>
+
+        <div id="game-interface" style="display: none;">
+            <div class="character-sheet">
+                <h2 id="hero-name"></h2>
+                <div class="stats">
+                    <div class="stat">
+                        <span class="stat-name">Classe:</span>
+                        <span id="hero-class" class="stat-value"></span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-name">Nível:</span>
+                        <span id="hero-level" class="stat-value">1</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-name">XP:</span>
+                        <span id="hero-xp" class="stat-value">0/100</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-name">Poder:</span>
+                        <span id="hero-power" class="stat-value"></span>
+                    </div>
+                </div>
+                <div class="health-bar">
+                    <div class="health-fill" id="health-fill"></div>
+                </div>
+                <span class="health-text" id="health-text">Motivação: 100%</span>
+            </div>
+
+            <div class="quest-log">
+                <h3>Missão Atual</h3>
+                <div id="current-quest" class="quest">
+                    <h4 id="quest-title"></h4>
+                    <p id="quest-description"></p>
+                    <div class="quest-progress">
+                        <div class="progress-bar" id="quest-progress"></div>
+                    </div>
+                    <p id="quest-time"></p>
+                </div>
+
+                <h3>Habilidades para Aprender</h3>
+                <ul id="skills-list" class="skills-list"></ul>
+            </div>
+
+            <div class="action-panel">
+                <button id="study-btn" class="action-btn">Estudar</button>
+                <button id="rest-btn" class="action-btn">Descansar</button>
+                <button id="resources-btn" class="action-btn">Recursos</button>
+                <button id="back-btn" class="action-btn">Voltar</button> <!-- Botão Voltar adicionado -->
+            </div>
+
+            <div class="game-message" id="game-message"></div>
+        </div>
+
+        <div id="resources-modal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                
+                <!-- Painel da Biblioteca do Sábio -->
+                <h2>Biblioteca do Sábio</h2>
+                <div id="resources-content"></div>
+                
+                <!-- Painel de Recursos Adicionais -->
+                <div id="additional-resources" class="resource-category" style="margin-top: 20px;">
+                    <h3>Recursos Adicionais</h3>
+                    <div class="resource-item">
+                        <h4>Alura</h4>
+                        <a href="https://www.alura.com.br/" class="resource-link" target="_blank">Acessar</a>
+                    </div>
+                    <div class="resource-item">
+                        <h4>Udemy</h4>
+                        <a href="https://www.udemy.com/" class="resource-link" target="_blank">Acessar</a>
+                    </div>
+                    <div class="resource-item">
+                        <h4>Rocketseat</h4>
+                        <a href="https://rocketseat.com.br/" class="resource-link" target="_blank">Acessar</a>
+                    </div>
+                    <div class="resource-item">
+                        <h4>OneBitCode</h4>
+                        <a href="https://onebitcode.com/" class="resource-link" target="_blank">Acessar</a>
+                    </div>
+                    <div class="resource-item">
+                        <h4>Curso em Vídeo</h4>
+                        <a href="https://www.cursoemvideo.com/" class="resource-link" target="_blank">Acessar</a>
+                    </div>
+                    <div class="resource-item">
+                        <h4>DIO</h4>
+                        <a href="https://www.dio.me/" class="resource-link" target="_blank">Acessar</a>
+                    </div>
+                    <div class="resource-item">
+                        <h4>Mateacademy</h4>
+                        <a href="https://mate.academy/pt-br" class="resource-link" target="_blank">Acessar</a>
+                    </div>
+                    <div class="resource-item">
+                        <h4>Jornada do Dev</h4>
+                        <a href="https://jornadadodev.com.br/" class="resource-link" target="_blank">Acessar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="study-timer-modal" class="modal" style="display: none;">
+            <div class="modal-content" style="max-width: 400px;">
+                <span class="close-btn" id="close-timer-btn">&times;</span>
+                <h2>Temporizador de Estudo</h2>
+                <div class="timer-display">
+                    <span id="timer-minutes">00</span>:<span id="timer-seconds">00</span>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar" id="timer-progress" style="width: 0%"></div>
+                </div>
+                <div style="display: flex; gap: 10px; margin-top: 20px;">
+                    <button id="pause-timer-btn" class="action-btn" style="flex: 1;">Pausar</button> <!-- Botão de Pausa -->
+                    <button id="cancel-timer-btn" class="action-btn" style="flex: 1; background-color: #e74c3c;">Cancelar</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Painel de Habilidades -->
+        <div id="skills-panel" class="skills-panel" style="display: none;">
+            <div class="skills-panel-header">
+                <h2>Habilidades para Aprender</h2>
+                <button id="toggle-skills-panel" class="toggle-btn">-</button>
+            </div>
+            <div id="skills-content" class="skills-content"></div>
+        </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

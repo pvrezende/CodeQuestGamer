@@ -1,0 +1,341 @@
+/* Estilos RPG */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #1a1a2e;
+    color: #e6e6e6;
+    line-height: 1.6;
+    padding: 20px;
+    margin: 0;
+}
+
+.game-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #16213e;
+    border: 4px solid #4cc9f0;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(76, 201, 240, 0.3);
+}
+
+.game-header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #0f3460;
+    border-radius: 8px;
+    border-bottom: 3px solid #4cc9f0;
+}
+
+.game-header h1 {
+    font-family: 'Press Start 2P', cursive;
+    color: #4cc9f0;
+    font-size: 2.5rem;
+    text-shadow: 3px 3px 0 #1a1a2e;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #f1c40f;
+    font-style: italic;
+}
+
+.character-creation, .character-sheet, .quest-log {
+    background-color: #0f3460;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.character-creation h2, .character-sheet h2, .quest-log h3 {
+    color: #f1c40f;
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 2px solid #4cc9f0;
+    padding-bottom: 10px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #4cc9f0;
+    font-weight: bold;
+}
+
+input[type="text"],
+select {
+    width: 100%;
+    padding: 10px;
+    background-color: #1a1a2e;
+    border: 2px solid #4cc9f0;
+    border-radius: 5px;
+    color: #e6e6e6;
+    font-size: 16px;
+}
+
+input[type="range"] {
+    width: 100%;
+    margin: 10px 0;
+    -webkit-appearance: none;
+    height: 10px;
+    background: #1a1a2e;
+    border-radius: 5px;
+    border: 1px solid #4cc9f0;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #f1c40f;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.start-btn {
+    background-color: #f1c40f;
+    color: #1a1a2e;
+    border: none;
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.start-btn:hover {
+    background-color: #4cc9f0;
+    color: #16213e;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.health-bar {
+    width: 100%;
+    height: 20px;
+    background-color: #1a1a2e;
+    border-radius: 10px;
+    margin: 10px 0;
+    overflow: hidden;
+    border: 1px solid #4cc9f0;
+}
+
+.health-fill {
+    height: 100%;
+    width: 100%;
+    background-color: #2ecc71;
+    transition: width 0.3s;
+}
+
+.health-text {
+    display: block;
+    text-align: center;
+    color: #e6e6e6;
+    font-size: 14px;
+}
+
+.quest-log {
+    background-color: #0f3460;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 2px solid #4cc9f0;
+}
+
+.quest-log h3 {
+    color: #f1c40f;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #4cc9f0;
+    padding-bottom: 5px;
+}
+
+.quest {
+    margin-bottom: 20px;
+}
+
+.quest h4 {
+    color: #4cc9f0;
+    margin-bottom: 10px;
+}
+
+.quest p {
+    margin-bottom: 10px;
+}
+
+.quest-progress {
+    width: 100%;
+    height: 15px;
+    background-color: #1a1a2e;
+    border-radius: 7px;
+    margin: 10px 0;
+    overflow: hidden;
+    border: 1px solid #4cc9f0;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background-color: #f1c40f;
+    transition: width 0.3s;
+}
+
+.skills-list {
+    list-style-type: none;
+}
+
+.skills-list li {
+    background-color: #1a1a2e;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    border-left: 4px solid #f1c40f;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.action-panel {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.action-btn {
+    flex: 1 1 calc(50% - 10px); /* Ajusta o tamanho dos botões */
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#study-btn {
+    background-color: #2ecc71;
+    color: #16213e;
+}
+
+#study-btn:hover {
+    background-color: #27ae60;
+}
+
+#rest-btn {
+    background-color: #3498db;
+    color: #16213e;
+}
+
+#rest-btn:hover {
+    background-color: #2980b9;
+}
+
+#resources-btn {
+    background-color: #9b59b6;
+    color: #16213e;
+}
+
+#resources-btn:hover {
+    background-color: #8e44ad;
+}
+.resource-category {
+    margin-bottom: 20px;
+    margin-top: 20px; /* Espaçamento entre os painéis */
+    padding: 10px;
+    border: 1px solid #4cc9f0; /* Borda para destacar os painéis */
+    border-radius: 5px;
+    background-color: #0f3460; /* Cor de fundo para os painéis */
+}
+
+.resource-item {
+    margin-bottom: 10px;
+}
+
+.resource-link {
+    color: #4cc9f0;
+    text-decoration: none;
+}
+
+.resource-link:hover {
+    text-decoration: underline;
+}
+
+.game-message {
+    background-color: #1a1a2e;
+    padding: 15px;
+    border-radius: 5px;
+    border-left: 4px solid #f1c40f;
+    margin-bottom: 20px;
+    font-style: italic;
+    animation: fadeIn 0.5s;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 100;
+    overflow: auto;
+}
+
+.modal-content {
+    background-color: #16213e;
+    margin: 5% auto;
+    padding: 20px;
+    border: 3px solid #4cc9f0;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 700px;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #f1c40f;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #e74c3c;
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+    .action-btn {
+        flex: 1 1 100%; /* Botões ocupam 100% da largura em telas pequenas */
+    }
+
+    .stats {
+        grid-template-columns: 1fr; /* Uma coluna em telas pequenas */
+    }
+
+    .game-header h1 {
+        font-size: 2rem; /* Reduz o tamanho da fonte em telas pequenas */
+    }
+}
