@@ -102,7 +102,7 @@ const gameData = {
         },
         backend: {
             courses: [
-                { name: "Node.js (Rocketseat)", link: "https://app.rocketseat.com.br/node" },
+                { name: "Node.js (Rocketseat)", link: "https://www.rocketseat.com.br/formacao/node" },
                 { name: "Banco de Dados SQL (Curso em Vídeo)", link: "https://www.cursoemvideo.com/curso/mysql/" }
             ],
             docs: [
@@ -112,16 +112,16 @@ const gameData = {
         },
         fullstack: {
             courses: [
-                { name: "Full Stack (OneBitCode)", link: "https://onebitcode.com/lp/" },
+                { name: "Full Stack (OneBitCode)", link: "https://www.onebitcode.com/javascript" },
                 { name: "Desenvolvimento Web Completo (Udemy)", link: "https://www.udemy.com/course/web-completo/" }
             ],
             docs: [
-                { name: "Full Stack Open (PT-BR)", link: "https://fullstackopen.com/pt/" }
+                { name: "Full Stack Open (PT-BR)", link: "https://fullstackopen.com/ptbr/" }
             ]
         },
         mobile: {
             courses: [
-                { name: "React Native (Rocketseat)", link: "https://app.rocketseat.com.br/react-native" },
+                { name: "React Native (Rocketseat)", link: "https://www.rocketseat.com.br/formacao/react-native" },
                 { name: "Flutter (Udemy)", link: "https://www.udemy.com/course/curso-flutter/" }
             ],
             docs: [
@@ -130,7 +130,7 @@ const gameData = {
         },
         devops: {
             courses: [
-                { name: "Docker (Udemy)", link: "https://www.udemy.com/course/curso-de-docker/" },
+                { name: "Docker (Udemy)", link: "https://www.udemy.com/courses/search/?lang=pt&q=docker&sort=relevance&src=ukw" },
                 { name: "Kubernetes (Alura)", link: "https://www.alura.com.br/curso-online-kubernetes" }
             ],
             docs: [
@@ -140,7 +140,7 @@ const gameData = {
         },
         datascience: {
             courses: [
-                { name: "Python para Data Science (Udemy)", link: "https://www.udemy.com/course/python-para-data-science-e-machine-learning/" },
+                { name: "Python para Data Science (Udemy)", link: "https://www.udemy.com/courses/search/?lang=pt&q=Python+para+Data+Science&sort=relevance&src=ukw" },
                 { name: "Data Science (Alura)", link: "https://www.alura.com.br/formacao-data-science" }
             ],
             docs: [
@@ -150,8 +150,8 @@ const gameData = {
         },
         cloud: {
             courses: [
-                { name: "AWS (Udemy)", link: "https://www.udemy.com/course/aws-certified-cloud-practitioner-portugues/" },
-                { name: "Azure (Alura)", link: "https://www.alura.com.br/formacao-microsoft-azure" }
+                { name: "AWS (Udemy)", link: "https://www.udemy.com/courses/search/?lang=pt&q=aws&sort=relevance&src=ukw" },
+                { name: "Azure (Alura)", link: "https://www.alura.com.br/formacao-conhecendo-azure?srsltid=AfmBOoqbNYFAZzsL5RpuzQQsJmzvMbF5IDYznQeFsgWTNiXYLfjnqRgk" }
             ],
             docs: [
                 { name: "AWS Docs (PT-BR)", link: "https://docs.aws.amazon.com/pt_br/" },
